@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/712b415c42.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div id="header-title">
+        <h1>To-Do List</h1>
+        <i class="fa-solid fa-pen-to-square" onclick="editTodoName()"></i>
+      </div>
+      <div id="header-alt" class="hide">
+        <form>
+          <input type="text" />
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <div class="list-container">
+        <div class="list-wrapper">
+          <div class="list-header-wrapper">
+            <h2>Pending</h2>
+            <i class="fa-solid fa-plus" onclick="addPendingTask()"></i>
+          </div>
+          <div id="pending-list" class="list">
+            <p id="no-pending">No Pending Tasks...</p>
+          </div>
+        </div>
+
+        <div class="list-wrapper">
+          <div class="list-header-wrapper">
+            <h2>Complete</h2>
+          </div>
+          <div id="complete-list" class="list">
+            <p id="no-completed">No Completed Tasks...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <template id="task-template">
+      <div class="list-element">
+        <i class="trash fa-solid fa-trash-can"></i>
+        <p class="hide">Task that needs to be done...</p>
+        <div id="edit-desc">
+          <input type="text" />
+        </div>
+        <i class="check fa-solid fa-check"></i>
+      </div>
+    </template>
+
+    <script src="index.js"></script>
+  </body>
+</html>
